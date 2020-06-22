@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "cc8847d9-f918-4169-bf57-525c17442202",
+		"name": "Node Mock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login JWT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"e8fd159b-57c4-4d36-9bd7-a59ca13057bb\",\n\t\"password\": \"dummyPassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User From PolicyID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwiaWF0IjoxNTkyNTIyNDM5LCJleHAiOjE1OTI1MjYwMzksImF1ZCI6ImFsbCIsInN1YiI6ImU4ZmQxNTliLTU3YzQtNGQzNi05YmQ3LWE1OWNhMTMwNTdiYiJ9.ShClsI8jWWnVhaTkCLonmTJcQ49mCBBrSCG3NbC0ZWJwJbYzyCPlgtFIBzb-eGjFSgG2b1L4-Faysxklwkfmzck7ME27KE-DkgYucTPTBqkvJIOqQuyIqwu0F95PJXo9OksdvYuEV_O-0yv-QfFHb2wL-ub9BM0-_9Fes26w8bAd1LZUhsc61_edfA3myp8WU1fdyOCLpPll66Eer5P6rwwFMpT6okrUKKRgrHlL92Oq_4XHVW0E3GFoSvLOg4Gsrj1NTtkrytfSAe0mKCt9J03jk0LSjTGWpDY03GL3haXg8vCnBGzRko6pTz8FyaHurfzIXzCtSCX7DKA5GopWiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"e8fd159b-57c4-4d36-9bd7-a59ca13057bb\",\n\t\"password\": \"dummyPassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/policies/64cceef9-3a01-49ae-a23b-3761b604800b/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policies",
+						"64cceef9-3a01-49ae-a23b-3761b604800b",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwiaWF0IjoxNTkyNTIyNDM5LCJleHAiOjE1OTI1MjYwMzksImF1ZCI6ImFsbCIsInN1YiI6ImU4ZmQxNTliLTU3YzQtNGQzNi05YmQ3LWE1OWNhMTMwNTdiYiJ9.ShClsI8jWWnVhaTkCLonmTJcQ49mCBBrSCG3NbC0ZWJwJbYzyCPlgtFIBzb-eGjFSgG2b1L4-Faysxklwkfmzck7ME27KE-DkgYucTPTBqkvJIOqQuyIqwu0F95PJXo9OksdvYuEV_O-0yv-QfFHb2wL-ub9BM0-_9Fes26w8bAd1LZUhsc61_edfA3myp8WU1fdyOCLpPll66Eer5P6rwwFMpT6okrUKKRgrHlL92Oq_4XHVW0E3GFoSvLOg4Gsrj1NTtkrytfSAe0mKCt9J03jk0LSjTGWpDY03GL3haXg8vCnBGzRko6pTz8FyaHurfzIXzCtSCX7DKA5GopWiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"e8fd159b-57c4-4d36-9bd7-a59ca13057bb\",\n\t\"password\": \"dummyPassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/e8fd159b-57c4-4d36-9bd7-a59ca13057bb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"e8fd159b-57c4-4d36-9bd7-a59ca13057bb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwiaWF0IjoxNTkyNTIyNDM5LCJleHAiOjE1OTI1MjYwMzksImF1ZCI6ImFsbCIsInN1YiI6ImU4ZmQxNTliLTU3YzQtNGQzNi05YmQ3LWE1OWNhMTMwNTdiYiJ9.ShClsI8jWWnVhaTkCLonmTJcQ49mCBBrSCG3NbC0ZWJwJbYzyCPlgtFIBzb-eGjFSgG2b1L4-Faysxklwkfmzck7ME27KE-DkgYucTPTBqkvJIOqQuyIqwu0F95PJXo9OksdvYuEV_O-0yv-QfFHb2wL-ub9BM0-_9Fes26w8bAd1LZUhsc61_edfA3myp8WU1fdyOCLpPll66Eer5P6rwwFMpT6okrUKKRgrHlL92Oq_4XHVW0E3GFoSvLOg4Gsrj1NTtkrytfSAe0mKCt9J03jk0LSjTGWpDY03GL3haXg8vCnBGzRko6pTz8FyaHurfzIXzCtSCX7DKA5GopWiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"e8fd159b-57c4-4d36-9bd7-a59ca13057bb\",\n\t\"password\": \"dummyPassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/Manning",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"Manning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Policies from User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImFkbWluIiwiaWF0IjoxNTkyNTIyNDM5LCJleHAiOjE1OTI1MjYwMzksImF1ZCI6ImFsbCIsInN1YiI6ImU4ZmQxNTliLTU3YzQtNGQzNi05YmQ3LWE1OWNhMTMwNTdiYiJ9.ShClsI8jWWnVhaTkCLonmTJcQ49mCBBrSCG3NbC0ZWJwJbYzyCPlgtFIBzb-eGjFSgG2b1L4-Faysxklwkfmzck7ME27KE-DkgYucTPTBqkvJIOqQuyIqwu0F95PJXo9OksdvYuEV_O-0yv-QfFHb2wL-ub9BM0-_9Fes26w8bAd1LZUhsc61_edfA3myp8WU1fdyOCLpPll66Eer5P6rwwFMpT6okrUKKRgrHlL92Oq_4XHVW0E3GFoSvLOg4Gsrj1NTtkrytfSAe0mKCt9J03jk0LSjTGWpDY03GL3haXg8vCnBGzRko6pTz8FyaHurfzIXzCtSCX7DKA5GopWiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"e8fd159b-57c4-4d36-9bd7-a59ca13057bb\",\n\t\"password\": \"dummyPassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/Manning/policies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"Manning",
+						"policies"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

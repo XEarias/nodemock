@@ -1,0 +1,136 @@
+swagger: "2.0"
+info:
+  title: NodeJs 
+  description: Mock services
+  version: 1.0.0
+host: localhost
+tags:
+  - name: users
+  - name: policies
+schemes:
+  - http
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: string
+        example: "a0ece5db-cd14-4f21-812f-966633e7be86"
+      name:
+        type: string
+        example: "Bertrand"
+      email:
+        type: string
+        example: "bertrandrussell@fake.com"
+      role: 
+        type: string
+        example: "admin"
+  Policy:
+    type: object
+    properties:
+      id:
+        type: string
+        example: "a0ece5db-cd14-4f21-812f-966633e7be86"
+      amountInsured:
+        type: number
+        example: 399.89
+      email:
+        type: string
+        example: "bertrandrussell@fake.com"
+      inceptionDate: 
+        type: string
+        example: "2015-07-06T06:55:49Z"
+      installmentPayment:
+        type: boolean
+        example: true
+      clientId:
+        type: string
+        example: "a0ece5db-cd14-4f21-812f-966633e7be86"
+  
+paths:
+  /users/{userId}:
+    get:
+      tags:
+        - users
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          required: true
+          description: "Bearer Token or Basic Auth"
+        - in: path
+          name: userId
+          type: string
+          required: true
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Get User data via id
+          schema:
+            $ref: '#/definitions/User'
+  /users/{name}:
+    get:
+      tags:
+        - users
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          required: true
+          description: "Bearer Token or Basic Auth"
+        - in: path
+          name: name
+          type: string
+          required: true
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Get User data via name
+          schema:
+            $ref: '#/definitions/User'
+  /users/{name}/policies:
+    get:
+      tags:
+        - users
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          required: true
+          description: "Bearer Token or Basic Auth"
+        - in: path
+          name: name
+          type: string
+          required: true
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Get Policies from User
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Policy'
+  /policies/{policyId}/users:
+    get:
+      tags:
+        - policies
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          required: true
+          description: "Bearer Token or Basic Auth"
+        - in: path
+          name: policyId
+          type: string
+          required: true
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Get User from Policy
+          schema:
+            $ref: '#/definitions/User'
