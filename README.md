@@ -40,6 +40,9 @@ $ docker run p 80:8080 nodemock:latest
 
 ### TODO:
 
+* Docker compose
+* Swagger server
+* Sonarqube spec file
 * Http cache with Redis
 * Kong Gateway spec file
 * Kubernetes/Openshift/Rancher spec file
