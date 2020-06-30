@@ -15,5 +15,5 @@ module.exports = {
     "rules": {
         "no-undef": "error"
     },
-    "plufins": ["jest"]
+    "plugins": ["jest"]
 };
