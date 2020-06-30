@@ -16,7 +16,7 @@ For mock porpuses, all users share same password. You can choose the Authenticat
 | :-----------          | :------------------------------------ | :---------           
 | **API_PORT**          | Any Int Number                        | ```8080```
 | **LOG_LEVEL**         | Syslog Levels                         | ```info```
-| **AUTH_TYPE**         | ```jwt | basic | none```              | ````none````
+| **AUTH_TYPE**         | ```jwt / basic / none```              | ``none``
 | **DUMMY_PASSWORD**    | any                                   | ````dummyPassword````
 
 ### Tests :beetle:
